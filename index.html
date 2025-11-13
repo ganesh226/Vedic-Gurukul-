@@ -1,77 +1,172 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ভাগবত গীতা - প্রথম অধ্যায় প্রথম শ্লোক</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ভাগবত গীতা — প্রথম অধ্যায়</title>
+
+  <!-- Bengali font -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@400;700;800&display=swap" rel="stylesheet">
+
   <style>
-    body {
-      background-color: #fff8e1;
-      color: #3e2723;
-      font-family: "Noto Sans Bengali", sans-serif;
-      text-align: center;
-      padding: 30px;
+    :root{
+      --bg:#fbf1df;
+      --card:#fff6f0;
+      --accent:#f97357;
+      --text:#2f1f14;
+      --muted:#6b4f3f;
     }
-    h1 {
-      color: #bf360c;
+    *{box-sizing:border-box}
+    body{margin:0; font-family:'Noto Serif Bengali', serif; background:linear-gradient(180deg,var(--bg),#fffdfa); color:var(--text)}
+    .wrap{max-width:820px;margin:18px auto;padding:18px}
+    header{display:flex;flex-direction:column;align-items:center;gap:6px}
+    header h1{font-size:34px;color:#a83b22;margin:8px 0}
+    header p{color:var(--muted);margin:0}
+
+    .card{background:var(--card);border-radius:16px;padding:20px;margin:18px 0;box-shadow:0 12px 30px rgba(40,20,10,0.06)}
+    .label{font-weight:800;color:#5b2f1a;margin-bottom:8px;text-align:center}
+    .shlok{font-size:22px;line-height:1.5;text-align:center;font-weight:700}
+    .trans{margin-top:12px;font-size:15px;color:var(--muted);line-height:1.6;padding:0 6px;text-align:justify}
+    .controls{display:flex;align-items:center;justify-content:center;margin-top:14px;gap:12px}
+    .playbtn{background:var(--accent);color:#fff;border:none;padding:10px 14px;border-radius:40px;font-weight:700;display:inline-flex;align-items:center;gap:10px;cursor:pointer;box-shadow:0 6px 18px rgba(249,115,87,0.18)}
+    .playbtn svg{width:18px;height:18px}
+    .progress{width:100%;height:6px;background:#fff;border-radius:6px;overflow:hidden;margin-top:12px}
+    .progress i{display:block;height:100%;width:0%;background:linear-gradient(90deg,#ffb199,#ff7a50);border-radius:6px}
+
+    footer{margin-top:12px;text-align:center;color:var(--muted);font-size:13px}
+
+    @media (max-width:420px){
+      header h1{font-size:26px}
+      .shlok{font-size:20px}
     }
-    .sloka-box {
-      background-color: #fff3e0;
-      padding: 20px;
-      border-radius: 12px;
-      margin: 20px auto;
-      max-width: 600px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-    .sloka {
-      font-size: 18px;
-      line-height: 1.8;
-      font-weight: bold;
-    }
-    .translation {
-      margin-top: 15px;
-      font-size: 16px;
-      color: #4e342e;
-    }
-    button {
-      background-color: #ff7043;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      border-radius: 25px;
-      cursor: pointer;
-      margin-top: 15px;
-      font-size: 16px;
-    }
-    button:hover {
-      background-color: #f4511e;
-    }
+
+    /* subtle parchment texture */
+    body::before{content:'';position:fixed;inset:0;z-index:-1;opacity:0.04;background-image:
+      radial-gradient(circle at 20% 10%, #e6ccb3 0 2%, transparent 2.5%),
+      radial-gradient(circle at 80% 90%, #f0d9b9 0 1.6%, transparent 2%)}
   </style>
 </head>
 <body>
+  <div class="wrap">
+    <header>
+      <h1>ভাগবত গীতা — প্রথম অধ্যায়</h1>
+      <p>অর্জুন বিষাদ-যোগ — শ্লোক ও অনুবাদ (অডিও প্লে করার জন্য প্লে বাটন চাপুন)</p>
+    </header>
 
-  <h1>🌸 ভাগবত গীতা 🌸</h1>
+    <main id="list"></main>
 
-  <div class="sloka-box">
-    <div class="sloka">
-      ধৃতরাষ্ট্র উবাচ <br>
-      ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুৎসবঃ।<br>
-      মামকাঃ পান্ডবাশ্চৈব কিমকুর্বত সঞ্জয়।।১।।
-    </div>
-
-    <div class="translation">
-      অনুবাদঃ ধৃতাষ্ট্র জিজ্ঞাসা করলেন- হে সঞ্জয়! ধর্মক্ষেত্রে যুদ্ধ করার মানসে সমবেত হয়ে আমার পুত্র এবং পান্ডুর পুত্রেরা তারপর কি করল?
-    </div>
-
-    <button onclick="playAudio()">🔊 শ্লোক শুনুন</button>
-    <audio id="slokaAudio" src="audio/1_1.mp3"></audio>
+    <footer>অডিও ফাইলগুলো `audio/` ফোল্ডারে রাখুন: উদাহরণ — audio/shlok1.mp3, audio/shlok2.mp3</footer>
   </div>
 
-  <script>
-    function playAudio() {
-      document.getElementById('slokaAudio').play();
-    }
-  </script>
+<script>
+/* =======================
+   এখানে প্রতিটি শ্লোক ও অনুবাদ লিখুন
+   যদি নতুন শ্লোক যোগ করতে চান, এখানে একটি নতুন object যোগ করুন
+   audio: দিন আপনার MP3 ফাইলের পাথ (উদাহরণ: audio/shlok1.mp3)
+   ======================= */
+const shloks = [
+  {
+    id: 1,
+    label: 'ধৃতরাষ্ট্র উবাচ',
+    shlok: 'ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুৎসবঃ। মামকাঃ পান্ডবাশ্চৈব কিমকুর্বত সঞ্জয়।।১।।',
+    translation: 'অনুবাদঃ ধৃতরাষ্ট্র জিজ্ঞাসা করলেন- হে সঞ্জয়! ধর্মক্ষেত্রে যুদ্ধ করার মানসে সমবেত হয়ে আমার পুত্র এবং পান্ডুর পুত্রেরা তারপর কি করল?',
+    audio: 'audio/shlok1.mp3'
+  },
+  {
+    id: 2,
+    label: 'সঞ্জয় উবাচ',
+    shlok: 'দৃষ্ট্বা তু পাণ্ডবানীকং ব্যূঢ়ং দুর্যোধনস্তদা। আচার্যমুপসঙ্গম্য রাজা বচনমব্রবীৎ।।২।।',
+    translation: 'অনুবাদঃ সঞ্জয় বললেন-হে রাজন্! পান্ডবদের সৈন্যসজ্জা দর্শন করে রাজা দুর্যোধন দ্রোণাচার্যের কাছে গিয়ে বললেন।',
+    audio: 'audio/shlok2.mp3'
+  }
+];
 
+/* helper */
+function el(tag, props={}, ...children){
+  const e = document.createElement(tag);
+  for(const k in props){
+    if(k==='class') e.className = props[k];
+    else if(k==='html') e.innerHTML = props[k];
+    else e.setAttribute(k, props[k]);
+  }
+  children.flat().forEach(c=>{
+    if(typeof c === 'string') e.appendChild(document.createTextNode(c));
+    else if(c) e.appendChild(c);
+  });
+  return e;
+}
+
+const list = document.getElementById('list');
+
+shloks.forEach(item=>{
+  const card = el('section',{class:'card', id:'shlok-'+item.id});
+
+  const label = el('div',{class:'label'}, item.label);
+  const sh = el('div',{class:'shlok', html: item.shlok});
+  const tr = el('div',{class:'trans', html: item.translation});
+
+  const audio = el('audio',{src:item.audio, preload:'none'});
+
+  const progress = el('div',{class:'progress'});
+  const progInner = el('i'); progress.appendChild(progInner);
+
+  const play = el('button',{class:'playbtn', type:'button'});
+  play.innerHTML = `
+    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M12 14C13.6569 14 15 12.6569 15 11V6C15 4.34315 13.6569 3 12 3C10.3431 3 9 4.34315 9 6V11C9 12.6569 10.3431 14 12 14Z" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+      <path d="M19 11V12C19 15.3137 16.3137 18 13 18H11C7.68629 18 5 15.3137 5 12V11" stroke="white" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+    <span>শোনান</span>
+  `;
+
+  const ctrl = el('div',{class:'controls'});
+  ctrl.appendChild(play);
+
+  card.appendChild(label);
+  card.appendChild(sh);
+  card.appendChild(tr);
+  card.appendChild(ctrl);
+  card.appendChild(progress);
+  card.appendChild(audio);
+
+  list.appendChild(card);
+
+  let playing = false;
+  play.addEventListener('click', ()=>{
+    // pause all other audios
+    document.querySelectorAll('audio').forEach(a=>{
+      if(a !== audio){
+        a.pause();
+        a.currentTime = 0;
+        const other = a.closest('.card');
+        if(other) other.querySelector('.playbtn')?.querySelector('span').textContent = 'শোনান';
+        other?.querySelector('.progress i').style.width = '0%';
+      }
+    });
+
+    if(!playing){
+      audio.play();
+      playing = true;
+      play.querySelector('span').textContent = 'বিরতি';
+    } else {
+      audio.pause();
+      playing = false;
+      play.querySelector('span').textContent = 'শোনান';
+    }
+  });
+
+  audio.addEventListener('timeupdate', ()=>{
+    const pct = (audio.currentTime / (audio.duration || 1)) * 100;
+    progInner.style.width = pct + '%';
+  });
+  audio.addEventListener('ended', ()=>{
+    playing = false;
+    play.querySelector('span').textContent = 'শোনান';
+    progInner.style.width = '0%';
+    audio.currentTime = 0;
+  });
+
+});
+</script>
 </body>
 </html>
