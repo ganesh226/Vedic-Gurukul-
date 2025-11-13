@@ -167,6 +167,37 @@ shloks.forEach(item=>{
   });
 
 });
-</script>
+<<script>
+const shloks = [
+  {
+    id: 1,
+    label: "শ্লোক ১",
+    shlok: "ধৃতরাষ্ট্র উবাচ । ধর্মক্ষেত্রে কুরক্ষেত্রে সমবেতা যুযুত্সবঃ । মামকাঃ পাণ্ডবাশ্চৈব কিমকুর্বত সঞ্জয় ॥",
+    translation: "ধৃতরাষ্ট্র বললেন: হে সঞ্জয়, ধর্মক্ষেত্র কুরক্ষেত্রে যুদ্ধে আগ্রহী হয়ে আমার পুত্রগণ ও পাণ্ডবগণ কী করল?",
+    audio: "audio/shlok1.mp3"
+  },
+  {
+    id: 2,
+    label: "শ্লোক ২",
+    shlok: "সঞ্জয় উবাচ । দ্রষ্ট্বা তু পাণ্ডবানীকং ব্যূহং দ্যুদ্য়োধনস্তদা । আচার্যমুপসংগম্য রাজা বচনমব্রবীত্ ॥",
+    translation: "সঞ্জয় বললেন: তখন রাজা দুর্যোধন, পাণ্ডবদের সেনাবাহিনীকে ব্যূহবদ্ধ অবস্থায় দেখে, দ্রোণাচার্যের কাছে গিয়ে এই কথা বলল।",
+    audio: "audio/shlok2.mp3"
+  }
+];
+
+const listContainer = document.getElementById("list");
+
+shloks.forEach(s => {
+  const div = document.createElement("div");
+  div.className = "card";
+  div.innerHTML = `
+    <h3>${s.label}</h3>
+    <p>${s.shlok}</p>
+    <p><em>${s.translation}</em></p>
+    <audio controls src="${s.audio}"></audio>
+  `;
+  listContainer.appendChild(div);
+});
+</script>>
 </body>
 </html>
