@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="bn">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ভাগবত গীতা - প্রথম অধ্যায় প্রথম শ্লোক</title>
+  <style>
+    body {
+      background-color: #fff8e1;
+      color: #3e2723;
+      font-family: "Noto Sans Bengali", sans-serif;
+      text-align: center;
+      padding: 30px;
+    }
+    h1 {
+      color: #bf360c;
+    }
+    .sloka-box {
+      background-color: #fff3e0;
+      padding: 20px;
+      border-radius: 12px;
+      margin: 20px auto;
+      max-width: 600px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+    .sloka {
+      font-size: 18px;
+      line-height: 1.8;
+      font-weight: bold;
+    }
+    .translation {
+      margin-top: 15px;
+      font-size: 16px;
+      color: #4e342e;
+    }
+    button {
+      background-color: #ff7043;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 25px;
+      cursor: pointer;
+      margin-top: 15px;
+      font-size: 16px;
+    }
+    button:hover {
+      background-color: #f4511e;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🌸 ভাগবত গীতা 🌸</h1>
+
+  <div class="sloka-box">
+    <div class="sloka">
+      ধৃতরাষ্ট্র উবাচ <br>
+      ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুৎসবঃ।<br>
+      মামকাঃ পান্ডবাশ্চৈব কিমকুর্বত সঞ্জয়।।১।।
+    </div>
+
+    <div class="translation">
+      অনুবাদঃ ধৃতাষ্ট্র জিজ্ঞাসা করলেন- হে সঞ্জয়! ধর্মক্ষেত্রে যুদ্ধ করার মানসে সমবেত হয়ে আমার পুত্র এবং পান্ডুর পুত্রেরা তারপর কি করল?
+    </div>
+
+    <button onclick="playAudio()">🔊 শ্লোক শুনুন</button>
+    <audio id="slokaAudio" src="audio/1_1.mp3"></audio>
+  </div>
+
+  <script>
+    function playAudio() {
+      document.getElementById('slokaAudio').play();
+    }
+  </script>
+
+</body>
+</html>
