@@ -1,72 +1,63 @@
-<!DOCTYPE html>
-<html lang="bn">
+<!DOCTYPE html><html lang="bn">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ভগবদ গীতা — প্রথম অধ্যায়</title>
-  <style>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>ভাগবত গীতা — প্রথম অধ্যায়</title>
+<style>
     body {
-      font-family: "Noto Serif Bengali", serif;
-      background: #fff9ef;
-      color: #4b2e05;
-      text-align: center;
-      padding: 20px;
-    }
-    h1 {
-      color: #8b0000;
-    }
-    .card {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-      margin: 15px auto;
-      padding: 15px;
-      max-width: 600px;
-    }
-    audio {
-      width: 100%;
-      margin-top: 10px;
-    }
-  </style>
+        margin: 0;
+        padding: 0;
+        font-family: 'Noto Sans Bengali', sans-serif;
+        background: #fff6d9;
+        color: #4b2e05;
+        text-align: center;
+    }h1 {
+    font-size: 32px;
+    margin-top: 30px;
+    color: #c4511e;
+    font-weight: 700;
+}
+
+.card {
+    width: 88%;
+    margin: 20px auto;
+    background: #ffeccb;
+    padding: 25px;
+    border-radius: 18px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+}
+
+h2 {
+    font-size: 26px;
+    color: #4b2e05;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 20px;
+    line-height: 1.6;
+}
+
+.btn {
+    background: #ff7a2f;
+    color: white;
+    font-size: 22px;
+    padding: 12px 25px;
+    border-radius: 30px;
+    display: inline-block;
+    margin-top: 15px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+</style>
 </head>
-<body>
-  <h1>ভগবদ গীতা — প্রথম অধ্যায়</h1>
-  <p>অর্জুন বিষাদ-যোগ — শ্লোক ও অনুবাদ</p>
+<body><h1>ভাগবত গীতা</h1><div class="card">
+    <h2>ধৃতরাষ্ট্র উবাচ</h2><p>
+    ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুত্সবঃ।<br>
+    মামকাঃ পাণ্ডবাশ্চৈব কিমকুর্বত সঞ্জয়।।১।।
+</p>
 
-  <div id="list"></div>
+<p>
+    <strong>অনুবাদঃ
 
-  <script>
-    const shloks = [
-      {
-        id: 1,
-        label: "শ্লোক ১",
-        shlok: "ধৃতরাষ্ট্র উবাচ । ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুৎসবঃ । মামকাঃ পান্ডবাশ্চৈব কিমকুর্বত সঞ্জয় ॥ ১ ॥",
-        translation: "ধৃতরাষ্ট্র জিজ্ঞাসা করলেন — হে সঞ্জয়! ধর্মক্ষেত্রে যুদ্ধের জন্য সমবেত হয়ে আমার পুত্র ও পান্ডুর পুত্রেরা কি করল?",
-        audio: "audio/shlok1.mp3"
-      },
-      {
-        id: 2,
-        label: "শ্লোক ২",
-        shlok: "সঞ্জয় উবাচ । দ্রষ্ট্বা তু পাণ্ডবানীকং ব্যূহং দুর্যোধনস্তদা । আচার্যমুপসঙ্গম্য রাজা বচনমব্রবীত্ ॥ ২ ॥",
-        translation: "সঞ্জয় বললেন — হে রাজন! পাণ্ডবদের সৈন্যবিন্যাস দেখে রাজা দুর্যোধন দ্রোণাচার্যের কাছে গিয়ে বললেন।",
-        audio: "audio/shlok2.mp3"
-      }
-    ];
-
-    const listContainer = document.getElementById("list");
-    listContainer.innerHTML = "";
-
-    shloks.forEach(s => {
-      const div = document.createElement("div");
-      div.className = "card";
-      div.innerHTML = `
-        <h3>${s.label}</h3>
-        <p>${s.shlok}</p>
-        <p><em>${s.translation}</em></p>
-        <audio controls src="${s.audio}"></audio>
-      `;
-      listContainer.appendChild(div);
-    });
-  </script>
-</body>
-</html>
