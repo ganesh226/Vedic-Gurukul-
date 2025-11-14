@@ -1,68 +1,157 @@
-<!DOCTYPE html><html lang="bn">
+<!DOCTYPE html>
+<html lang="bn">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>শ্রীমদ্ভগবত গীতা</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ভাগবত গীতা</title>
+
 <style>
-    body {
+    body{
+        font-family: "Noto Sans Bengali", sans-serif;
+        background: #fff7e0;
         margin: 0;
         padding: 0;
-        font-family: 'Noto Sans Bengali', sans-serif;
-        background: #fff6d9;
-        color: #4b2e05;
         text-align: center;
-    }h1 {
-    font-size: 32px;
-    margin-top: 30px;
-    color: #c4511e;
-    font-weight: 700;
-}
+    }
 
-.card {
-    width: 88%;
-    margin: 20px auto;
-    background: #ffeccb;
-    padding: 25px;
-    border-radius: 18px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.15);
-}
+    header{
+        padding: 20px 10px;
+    }
 
-h2 {
-    font-size: 26px;
-    color: #4b2e05;
-    margin-bottom: 10px;
-}
+    header h1{
+        font-size: 34px;
+        color: #c44a1a;
+        margin-bottom: 5px;
+        font-weight: 800;
+    }
 
-p {
-    font-size: 20px;
-    line-height: 1.6;
-}
+    header h2{
+        font-size: 20px;
+        color: #7a3b1a;
+        margin: 0;
+        font-weight: 700;
+    }
 
-.btn {
-    background: #ff7a2f;
-    color: white;
-    font-size: 22px;
-    padding: 12px 25px;
-    border-radius: 30px;
-    display: inline-block;
-    margin-top: 15px;
-    text-decoration: none;
-    font-weight: 600;
-}
+    header h3{
+        font-size: 18px;
+        color: #5e2e12;
+        margin: 5px 0 15px;
+        font-weight: 600;
+    }
 
+    .card{
+        background: #ffeecf;
+        width: 90%;
+        margin: auto;
+        padding: 20px;
+        border-radius: 16px;
+        box-shadow: 0 4px 10px #e6d8c8;
+        margin-bottom: 30px;
+    }
+
+    .card h2{
+        font-size: 26px;
+        font-weight: 900;
+        color: #4d2d04;
+        margin-bottom: 18px;
+    }
+
+    .shlok-row{
+        display: flex;
+        justify-content: center;
+        gap: 12px;
+        margin-bottom: 12px;
+    }
+
+    .shlok-text{
+        font-size: 20px;
+        font-weight: 800;
+        max-width: 75%;
+        line-height: 1.6;
+        text-align: center;
+        color:#3a2303;
+    }
+
+    .shlok-num{
+        font-size: 19px;
+        font-weight: 800;
+        min-width: 40px;
+        text-align: right;
+        color:#3b2403;
+    }
+
+    .translation{
+        font-size: 17px;
+        color:#4a341e;
+        margin-top: 15px;
+        line-height: 1.6;
+        padding: 0 5px;
+        text-align: left;
+    }
+
+    .translation strong{
+        font-weight: 900;
+    }
+
+    .shlok-note{
+        margin-top: 10px;
+        color: #5c4633;
+        font-size: 15px;
+        text-align: center;
+        font-style: italic;
+    }
+
+    .btn{
+        display: inline-block;
+        margin-top: 18px;
+        background: #ff7a2f;
+        padding: 12px 32px;
+        font-size: 20px;
+        border-radius: 32px;
+        color: white;
+        font-weight: 700;
+        text-decoration: none;
+        box-shadow: 0 4px 10px #d48a5c;
+    }
+
+    @media(max-width:480px){
+        .shlok-row{
+            flex-direction: column;
+        }
+        .shlok-num{
+            text-align: center;
+        }
+    }
 </style>
 </head>
-<body><h1>ভাগবত গীতা</h1><div class="card">
-    <h2>ধৃতরাষ্ট্র উবাচ</h2><p>
-    ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুত্সবঃ।<br>
-    মামকাঃ পাণ্ডবাশ্চৈব কিমকুর্বত সঞ্জয়।।১।।
-</strong>
 
-<p>
-    <strong>অনুবাদঃ</strong> ধৃতরাষ্ট্র জিজ্ঞাসা করলেন— হে সঞ্জয়! ধর্মক্ষেত্রে যুদ্ধ করার মানসে সমবেত হয়ে আমার পুত্ৰ এবং পাণ্ডুর পুত্রেরা তারপরে কি করল?
-</p>
+<body>
 
-<a class="btn">🔊 শ্লোক শুনুন</a>
+<header>
+    <h1>শ্রীমদ্ভাগবত গীতা</h1>
+    <h2>প্রথম অধ্যায়</h2>
+    <h3>বিষাদ-যোগ</h3>
+</header>
 
-</div></body>
+<div class="card">
+    <h2>ধৃতরাষ্ট্র উবাচ</h2>
+
+    <div class="shlok-row">
+        <div class="shlok-text">
+            ধর্মক্ষেত্রে কুরুক্ষেত্রে সমবেতা যুযুৎসবঃ।  
+            মামকাঃ পান্ডবাশ্চৈব কিমকুর্বত সঞ্জয়।।
+        </div>
+        <div class="shlok-num">।।১।।</div>
+    </div>
+
+    <p class="translation">
+        <strong>অনুবাদঃ</strong> ধৃতরাষ্ট্র জিজ্ঞাসা করলেন— হে সঞ্জয়! ধর্মক্ষেত্রে যুদ্ধ করার মানসে সমবেত হয়ে আমার পুত্র এবং পাণ্ডুর পুত্রেরা তারপর কি করল?
+    </p>
+
+    <p class="shlok-note">— শ্লোক সমাপ্ত —</p>
+
+    <a class="btn">🔊 শ্লোক শুনুন</a>
+</div>
+
+</body>
 </html>
